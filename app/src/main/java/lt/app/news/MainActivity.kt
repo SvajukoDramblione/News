@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import lt.app.news.data.events.ShowNewsDetailsEvent
-import lt.app.news.injections.ActivityComponent
-import lt.app.news.injections.DaggerActivityComponent
-import lt.app.news.injections.modules.ActivityModule
-import lt.app.news.injections.modules.ApiModule
+import lt.app.news.injections.components.DaggerActivityComponent
+import lt.app.news.injections.components.ActivityComponent
 import lt.app.news.injections.modules.AppModule
 import lt.app.news.ui.newslist.NewsListFragment
 import org.greenrobot.eventbus.EventBus

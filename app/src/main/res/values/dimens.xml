@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">136dp</dimen>
+    <dimen name="list_item_margin">8dp</dimen>
+    <dimen name="list_image_width">160dp</dimen>
+    <dimen name="list_image_height">120dp</dimen>
+    <dimen name="corners_radius">8dp</dimen>
+    <dimen name="elevation_size">4dp</dimen>
+
+    <dimen name="text_loading">20sp</dimen>
+</resources>

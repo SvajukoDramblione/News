@@ -1,13 +1,17 @@
 package lt.app.news
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import lt.app.news.data.events.ShowNewsDetailsEvent
 import lt.app.news.injections.ActivityComponent
 import lt.app.news.injections.DaggerActivityComponent
 import lt.app.news.injections.modules.ActivityModule
 import lt.app.news.injections.modules.ApiModule
 import lt.app.news.injections.modules.AppModule
+import lt.app.news.ui.newslist.NewsListFragment
 import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -24,19 +28,31 @@ class MainActivity : AppCompatActivity() {
         prepareActivityComponent()
         activityComponent.inject(this)
 
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
         if (savedInstanceState == null) {
-            // go to initial fragment
+            goToNewsFragment()
         }
     }
 
     override fun onStart() {
         super.onStart()
+        eventBus.register(this)
     }
 
     override fun onStop() {
         super.onStop()
+        eventBus.unregister(this)
+    }
+
+    @Subscribe
+    fun onEvent(event: ShowNewsDetailsEvent) {
+        Log.d("ShowNewsDetailsEvent", event.article.title.toString())
+    }
+
+    private fun goToNewsFragment() {
+        supportFragmentManager.beginTransaction()
+            .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
+            .replace(R.id.container, NewsListFragment.newInstance())
+            .commitNow()
     }
 
     private fun prepareActivityComponent() {

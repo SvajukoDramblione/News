@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
@@ -17,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import lt.app.news.MainActivity
 import lt.app.news.R
-import lt.app.news.data.Article
 import lt.app.news.data.events.ShowNewsDetailsEvent
 import org.greenrobot.eventbus.EventBus
 import javax.inject.Inject

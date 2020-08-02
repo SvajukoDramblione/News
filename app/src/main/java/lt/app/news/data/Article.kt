@@ -1,6 +1,6 @@
 package lt.app.news.data
 
-import java.util.*
+import java.util.Date
 
 class Article {
     val source: Source? = null

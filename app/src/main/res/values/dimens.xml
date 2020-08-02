@@ -7,5 +7,10 @@
     <dimen name="corners_radius">8dp</dimen>
     <dimen name="elevation_size">4dp</dimen>
 
-    <dimen name="text_loading">20sp</dimen>
+    <dimen name="details_layout_margin">16dp</dimen>
+    <dimen name="details_button_height">48dp</dimen>
+    <dimen name="details_textview_margin">12dp</dimen>
+
+    <dimen name="text_loading">18sp</dimen>
+    <dimen name="text_headline">20sp</dimen>
 </resources>

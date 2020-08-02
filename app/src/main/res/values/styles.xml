@@ -6,12 +6,26 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">@font/amita</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="ListItem">
         <item name="android:elevation">@dimen/elevation_size</item>
         <item name="android:background">@drawable/rounded_corners_white_bg</item>
         <item name="android:layout_margin">@dimen/list_item_margin</item>
+    </style>
+
+    <style name="CustomButton" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/blackColor</item>
+        <item name="android:background">@drawable/rounded_corners_grey_bg</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/amita_bold</item>
+    </style>
+
+    <style name="Headline" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/amita_bold</item>
     </style>
 
 </resources>

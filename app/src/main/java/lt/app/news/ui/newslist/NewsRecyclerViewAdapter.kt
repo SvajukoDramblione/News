@@ -8,9 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import lt.app.news.R
+import lt.app.news.Utils
 import lt.app.news.data.Article
-import java.text.SimpleDateFormat
-import java.util.*
 
 class NewsRecyclerViewAdapter(
     private var values: List<Article>,
@@ -30,7 +29,7 @@ class NewsRecyclerViewAdapter(
             holder.descriptionView.text = title
             var publishDateStr = ""
             publishedAt?.let {
-                publishDateStr = getFormattedDate(it)
+                publishDateStr = Utils.getFormattedDate(it)
             }
             holder.dateView.text = publishDateStr
             holder.itemView.context
@@ -59,10 +58,5 @@ class NewsRecyclerViewAdapter(
                 onClickListener.invoke(values[adapterPosition])
             }
         }
-    }
-
-    private fun getFormattedDate(date: Date): String {
-        val formatter = SimpleDateFormat("yyyy-MMM-dd HH:mm", Locale.ENGLISH)
-        return formatter.format(date)
     }
 }

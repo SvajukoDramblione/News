@@ -3,4 +3,5 @@
     <string name="error">Oops… something went wrong. Try to refresh page</string>
     <string name="loading">Loading… please wait</string>
     <string name="refresh">Refresh</string>
+    <string name="read_full_article">Skaityti visą straipsnį</string>
 </resources>
